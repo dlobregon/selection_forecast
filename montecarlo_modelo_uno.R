@@ -69,10 +69,10 @@ for(i in c(1:1000)){
 
 # hacemos una función que interprete los resultados de la elección
 interpretar_resultado<-function(resultado){
-  valor_resultado_a<- sum(resultado)/length(resultado)
-  valor_resultado_b<- 1-valor_resultado_a
-  respuesta<-ifelse(valor_resultado_a>valor_resultado_b, "ganó B",
-                    ifelse(valor_resultado_a<valor_resultado_b, "ganó A","Empate entre A y B") 
+  valor_resultado_b<- sum(resultado)/length(resultado)
+  valor_resultado_a<- 1-valor_resultado_b
+  respuesta<-ifelse(valor_resultado_b>valor_resultado_a, "ganó B",
+                    ifelse(valor_resultado_b<valor_resultado_a, "ganó A","Empate entre A y B") 
                     )
   
   return(respuesta)
