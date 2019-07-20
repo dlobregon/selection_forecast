@@ -13,10 +13,10 @@ b_candidato<-c(1,5,5)
 # en realidad no sabemos cuantas estructuras existen.
 
 # haremos 4 vectores donde almacenaremos los resultados para cada estructura
-resusltados_1<-c()
-resusltados_2<-c()
-resusltados_3<-c()
-resusltados_4<-c()
+resultados_1<-c()
+resultados_2<-c()
+resultados_3<-c()
+resultados_4<-c()
 
 # declaramos la función de elección
 escoger_candidato<-function(coeficientes, candidato_a, candidato_b){
@@ -49,22 +49,22 @@ for(i in c(1:1000)){
   # coeficientes estructura "1"
   coeficientes_estructura_1<-generar_coeficientes()
   #guardamos la selección
-  resusltados_1<-c(resusltados_1, escoger_candidato(coeficientes_estructura_1,  a_candidato, b_candidato))
+  resultados_1<-c(resultados_1, escoger_candidato(coeficientes_estructura_1,  a_candidato, b_candidato))
   
   # coeficientes estructura "2"
   coeficientes_estructura_2<-generar_coeficientes()
   #guardamos la selección
-  resusltados_2<-c(resusltados_2, escoger_candidato(coeficientes_estructura_2,  a_candidato, b_candidato))
+  resultados_2<-c(resultados_2, escoger_candidato(coeficientes_estructura_2,  a_candidato, b_candidato))
   
   # coeficientes estructura "3"
   coeficientes_estructura_3<-generar_coeficientes()
   #guardamos la selección
-  resusltados_3<-c(resusltados_3, escoger_candidato(coeficientes_estructura_3,  a_candidato, b_candidato))
+  resultados_3<-c(resultados_3, escoger_candidato(coeficientes_estructura_3,  a_candidato, b_candidato))
   
   # coeficientes estructura "4"
   coeficientes_estructura_4<-generar_coeficientes()
   #guardamos la selección
-  resusltados_4<-c(resusltados_4, escoger_candidato(coeficientes_estructura_4,  a_candidato, b_candidato))
+  resultados_4<-c(resultados_4, escoger_candidato(coeficientes_estructura_4,  a_candidato, b_candidato))
 }
 
 # hacemos una función que interprete los resultados de la elección
@@ -78,10 +78,10 @@ interpretar_resultado<-function(resultado){
 }
 
 # para estructura 1
-interpretar_resultado(resusltados_1)
+interpretar_resultado(resultados_1)
 # para estructura 2
-interpretar_resultado(resusltados_2)
+interpretar_resultado(resultados_2)
 # para estructura 3
-interpretar_resultado(resusltados_3)
+interpretar_resultado(resultados_3)
 # para estrucutura 4
-interpretar_resultado(resusltados_4)
+interpretar_resultado(resultados_4)
