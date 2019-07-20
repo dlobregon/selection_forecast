@@ -16,6 +16,7 @@ b_candidato<-sample(x = c(1:10), size = 3, replace = TRUE)
 # coeficiente1*punteo1 + coeficiente2*punteo3
 # la generación de coeficientes es la siguiente:
 coeficientes_estructura_a<-sample(x = c(1:3), size = 3,replace = TRUE)
+# hacemos que la suma de los coeficientes sea igual a 1.
 coeficientes_estructura_a<-coeficientes_estructura_a/sum(coeficientes_estructura_a)
 
 
@@ -23,6 +24,7 @@ coeficientes_estructura_a<-coeficientes_estructura_a/sum(coeficientes_estructura
 escoger_candidato<-function(coeficientes, candidato_a, candidato_b){
   # la operación es para poder determinar el coeficiente
   # 0 es no conveniente, 1 es conveniencia total
+  # se divide dentro de 10 porque los punteos son de 1 a 10
   a_candidato_coeficiente<-sum(candidato_a*coeficientes_estructura_a)/10
   b_candidato_coeficiente<-sum(candidato_b*coeficientes_estructura_a)/10
   
