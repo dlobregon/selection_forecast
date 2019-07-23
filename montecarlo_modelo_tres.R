@@ -98,4 +98,4 @@ valores_totales<-c(
 )
 resultado_general<-sum(valores_totales*pesos_estructuras)/100
 resultado_general
-resultados_totales<-c(resultados_totales, resultado_general)
+
