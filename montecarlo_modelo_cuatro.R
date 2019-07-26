@@ -96,10 +96,11 @@ for(i in c(1:10000)){
   resultado_general<-sum(valores_totales*pesos_actores)
   resultado_final<-c(resultado_final, resultado_general)
 }
-
+# u es la media del resultado
 u<-mean(resultado_final)
 
 varianza<-(sum((resultado_final - u)^2)) / length(resultado_final)
 std<-sqrt(varianza)
+# std es nuestra estimación del error.
 std
 
